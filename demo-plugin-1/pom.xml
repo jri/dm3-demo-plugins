@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>DM3 Demo Plugin 1</name>
+    <groupId>de.deepamehta.demo-plugins</groupId>
+    <artifactId>dm3-demo-plugin-1</artifactId>
+    <version>0.5-SNAPSHOT</version>
+    <packaging>bundle</packaging>
+
+    <parent>
+        <groupId>de.deepamehta</groupId>
+        <artifactId>deepamehta3-plugin-parent</artifactId>
+        <version>0.5-SNAPSHOT</version>
+    </parent>
+
+    <repositories>
+        <repository>
+            <id>deepamehta-public-repository</id>
+            <url>http://www.deepamehta.de/maven2</url>
+        </repository>
+    </repositories>
+</project>

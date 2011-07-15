@@ -1,0 +1,18 @@
+{
+    topic_types: [
+        {
+            value: "My Topic Type",
+            uri: "domain.dm3_demo_plugins.my_topic_type",
+            data_type_uri: "dm3.core.text",
+            index_mode_uris: ["dm3.core.fulltext"],
+            view_config_topics: [
+                {
+                    type_uri: "dm3.webclient.view_config",
+                    composite: {
+                        dm3.webclient.add_to_create_menu: true,
+                    }
+                }
+            ]
+        }
+    ]
+}
