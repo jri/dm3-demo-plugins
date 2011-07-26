@@ -2,14 +2,14 @@
     topic_types: [
         {
             value: "My Topic Type",
-            uri: "domain.dm3_demo_plugins.my_topic_type",
-            data_type_uri: "dm3.core.text",
-            index_mode_uris: ["dm3.core.fulltext"],
+            uri: "domain.dm4_demo_plugins.my_topic_type",
+            data_type_uri: "dm4.core.text",
+            index_mode_uris: ["dm4.core.fulltext"],
             view_config_topics: [
                 {
-                    type_uri: "dm3.webclient.view_config",
+                    type_uri: "dm4.webclient.view_config",
                     composite: {
-                        dm3.webclient.add_to_create_menu: true,
+                        dm4.webclient.add_to_create_menu: true
                     }
                 }
             ]

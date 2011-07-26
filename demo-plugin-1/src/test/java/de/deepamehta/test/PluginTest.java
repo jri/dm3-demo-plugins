@@ -49,17 +49,17 @@ public class PluginTest {
     public static Option[] configuration() {
         return options(felix(), cleanCaches(), autoWrap(),
             systemProperty("org.osgi.service.http.port").value("8086"),
-            systemProperty("dm3.database.path").value("dm3-db"),
-            scanPom("mvn:de.deepamehta/felix-bundles/0.5-SNAPSHOT/pom"),
-            scanPom("mvn:de.deepamehta/3rd-party-bundles/0.5-SNAPSHOT/pom"),
-            scanPom("mvn:de.deepamehta/deepamehta3-bundles/0.5-SNAPSHOT/pom"),
-            scanPom("mvn:de.deepamehta.demo-plugins/dm3-demo-plugin-1/0.5-SNAPSHOT/pom"));
+            systemProperty("dm4.database.path").value("dm4-db"),
+            scanPom("mvn:de.deepamehta/felix-bundles/4.0/pom"),
+            scanPom("mvn:de.deepamehta/3rd-party-bundles/4.0/pom"),
+            scanPom("mvn:de.deepamehta/deepamehta-bundles/4.0/pom"),
+            scanPom("mvn:de.deepamehta.demo-plugins/dm4-demo-plugin-1/4.0/pom"));
     }
 
     @Test
     public void test() {
         String TXT = "Hi Demo!";
-        Topic t1 = dms.createTopic(new TopicModel("domain.dm3_demo_plugins.my_topic_type", new SimpleValue(TXT)), null);
+        Topic t1 = dms.createTopic(new TopicModel("domain.dm4_demo_plugins.my_topic_type", new SimpleValue(TXT)), null);
         assertEquals(TXT, t1.getSimpleValue().toString());
         Topic t2 = dms.getTopic(t1.getId(), false, null);
         assertEquals(TXT, t2.getSimpleValue().toString());
